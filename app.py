@@ -4,7 +4,8 @@ import numpy as np
 from datetime import datetime
 
 # Load the trained model
-model = joblib.load("random_forest_temperature_model.joblib")
+
+model = joblib.load("rf_model_sklearn_1_3_2.joblib")
 
 app = Flask(__name__)
 

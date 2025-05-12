@@ -1,5 +1,4 @@
 from flask import Flask, request, jsonify
-from flask_cors import CORS
 import joblib
 import numpy as np
 from datetime import datetime
@@ -8,9 +7,6 @@ from datetime import datetime
 model = joblib.load("random_forest_temperature_model.joblib")
 
 app = Flask(__name__)
-
-# ✅ Enable CORS for all domains OR restrict to your site
-CORS(app, resources={r"/predict": {"origins": "https://ccnyforhaiti.com"}})
 
 @app.route("/")
 def home():
